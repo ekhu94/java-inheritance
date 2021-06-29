@@ -7,4 +7,12 @@ public class TextBox extends UIControl {
         super(enabled);
         System.out.println("TextBox");
     }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void clear() {
+        this.text = "";
+    }
 }
