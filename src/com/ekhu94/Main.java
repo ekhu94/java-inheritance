@@ -3,8 +3,16 @@ package com.ekhu94;
 public class Main {
 
     public static void main(String[] args) {
-	    var box1 = new TextBox(false);
+	    var box1 = new TextBox();
 	    show(box1);
+	    renderUIs();
+    }
+
+    public static void renderUIs() {
+        UIControl[] controls = { new TextBox(), new CheckBox() };
+        for (UIControl control : controls) {
+            control.render();
+        }
     }
 
     public static void show(UIControl control) {

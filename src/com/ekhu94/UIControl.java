@@ -1,12 +1,9 @@
 package com.ekhu94;
 
-public class UIControl {
-    private boolean enabled;
+public abstract class UIControl {
+    private boolean enabled = false;
 
-    public UIControl(boolean enabled) {
-        this.enabled = enabled;
-        System.out.println("UI Control");
-    }
+    public abstract void render();
 
     public void enable() {
         this.enabled = true;
